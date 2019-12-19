@@ -1,59 +1,68 @@
-# calculatoReact
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-> This is a calculator app built with HTML, CSS, JS and React. Based on this [project guidelines](https://github.com/microverseinc/project-react-calculator/blob/master/README.md). The main purpose is to develop and deploy a functional React calculator app.
+## Available Scripts
 
-![screenshot](https://raw.githubusercontent.com/microverseinc/project-react-calculator/master/images/calculator.png)
+In the project directory, you can run:
 
-## Built With
+### `yarn start`
 
-- HTML,
-- CSS (SCSS),
-- JavaScript (Node)
-- React
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Live Demo
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-[Live Demo Link](#)
+### `yarn test`
 
-## Getting Started
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-To get a local copy up and running follow these simple example steps. You can skip the next 3 steps if you choose the live page.
+### `yarn build`
 
-### Prerequisites
-  A text editor of your choice and Internet connection.
-  
-### Setup
-  Clone the repository on your local or cloud machine.
-  
-### Install
-  Run `npm i` on your terminal to install the required dependencies;
-  Then run `npm run server` to launch the local server. It will open on your main browser.
-  
-### Usage
-  Make amazing mathematical operations!
-  
-## Author
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-**Matheus Silva**
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-- Github: [@matheus-fls](https://github.com/matheus-fls)
-- Twitter: [@Matheus06600798](https://twitter.com/Matheus06600798)
-- Linkedin: [Matheus F. Lopes da Silva](https://www.linkedin.com/in/matheus-f-lopes-da-silva-05610a107/)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## 🤝 Contributing
+### `yarn eject`
 
-Contributions, issues and feature requests are welcome!
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Feel free to check the [issues page](https://github.com/matheus-fls/weather-app/issues).
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Show your support
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Give a ⭐️ if you like this project!
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Acknowledgments
+## Learn More
 
-- Lots of thanks to the Microverse staff and my incredible Team for their constant support and feedback.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## 📝 License
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-This project is [MIT](lic.url) licensed.
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
