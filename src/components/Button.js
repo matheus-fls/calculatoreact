@@ -2,11 +2,11 @@ import React from 'react';
 
 class Button extends React.Component {
   render() {
-    return (
-      <div>
-        <h1>Button</h1>
-      </div>
-    );
+    return <div>
+      {this.props.names.map((name) => (
+        <span>{ name }</span>
+      ))}
+    </div>;
   }
 }
 
