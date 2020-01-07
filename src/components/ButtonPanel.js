@@ -16,21 +16,3 @@ class ButtonPanel extends React.Component {
 }
 
 export default ButtonPanel;
-
-{/* <div>
-  <div>
-  <Button names={['AC', '+/-', '%', '÷']}/>
-  </div>
-  <div>
-    <Button names={['7', '8', '9', 'X']} />
-  </div>
-  <div>
-    <Button names={['4', '5', '6', '-']} />
-  </div>
-  <div>
-    <Button names={['1', '2', '3', '+']} />
-  </div>
-  <div>
-    <Button names={['0', '.', '=']} />
-  </div>
-</div> */}
