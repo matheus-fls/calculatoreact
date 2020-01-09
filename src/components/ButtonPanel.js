@@ -11,9 +11,10 @@ export default function ButtonPanel() {
 
   return (
     <div>
-      {(buttons.map((e) => <div key={(Math.random() * 100).toString()}>
-        {e.map((name) => <Button key={name} name={name} />)}
-      </div>
+      {buttons.map(e => (
+        <div key={(Math.random() * 100).toString()}>
+          {e.map(name => <Button key={name} name={name} />)}
+        </div>
       ))}
     </div>
   );
