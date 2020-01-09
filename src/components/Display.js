@@ -8,7 +8,3 @@ export default function Display(state) {
     </div>
   );
 }
-
-Display.propTypes = {
-  result: PropTypes.string.isRequired
-}

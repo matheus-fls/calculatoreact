@@ -10,13 +10,13 @@ class App extends React.Component {
   }
 
   render() {
-    const { result } = this.state
+    const { result } = this.state;
     return (
       <div className="App">
         <Display result={result} />
         <ButtonPanel />
       </div>
-    )
+    );
   }
 }
 

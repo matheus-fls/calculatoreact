@@ -7,20 +7,15 @@ export default function ButtonPanel() {
     ['4', '5', '6', '-'],
     ['1', '2', '3', '+'],
     ['0', '.', '='],
-  ]
+  ];
+  
   return (
     <div>
-      {buttons.map((e, index) => {
-        return (
-          <div key={index}>
-            {e.map((name) => {
-              return (
-                <Button key={name} name={name} />
-              );
-            })}
+      {buttons.map((e, index) => 
+          <div key={`group-${index}`}>
+            {e.map((name) => <Button key={name} name={name} />)}
           </div>
-        );
-      })}
+      )}
     </div>
   );
 }
