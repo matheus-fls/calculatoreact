@@ -8,14 +8,13 @@ export default function ButtonPanel() {
     ['1', '2', '3', '+'],
     ['0', '.', '='],
   ];
-  
+
   return (
     <div>
-      {buttons.map((e, index) => 
-          <div key={`group-${index}`}>
-            {e.map((name) => <Button key={name} name={name} />)}
-          </div>
-      )}
+      {(buttons.map((e) => <div key={(Math.random() * 100).toString()}>
+        {e.map((name) => <Button key={name} name={name} />)}
+      </div>
+      ))}
     </div>
   );
 }
