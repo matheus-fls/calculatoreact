@@ -10,12 +10,12 @@ export default function ButtonPanel() {
   ]
   return (
     <div>
-      {buttons.map((e) => {
+      {buttons.map((e, index) => {
         return (
-          <div>
+          <div key={index}>
             {e.map((name) => {
               return (
-                <Button name={ name } />
+                <Button key={name} name={name} />
               );
             })}
           </div>
