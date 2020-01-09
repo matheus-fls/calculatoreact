@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Display extends React.Component {
   render() {
@@ -8,6 +9,10 @@ class Display extends React.Component {
       </div>
     );
   }
+}
+
+Display.propTypes = {
+  result: PropTypes.string.isRequired
 }
 
 export default Display;
