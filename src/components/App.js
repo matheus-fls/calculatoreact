@@ -6,17 +6,17 @@ import '../App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { result: '0' };
+    this.state = { result: '' };
   }
 
   render() {
-    const { result } = this.state;
+    const { result } = this.state.result;
     return (
       <div className="App">
-        <Display result={result} />
+        <Display result={result}/>
         <ButtonPanel />
       </div>
-    );
+    )
   }
 }
 
