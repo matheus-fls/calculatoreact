@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 export default function Button({ name, color, wide }) {
   return (
-    <button type="button" 
-      className={wide ? 'wide button' : 'button'} 
+    <button 
+      type="button"
+      className={wide ? 'wide button' : 'button'}
       style={{ backgroundColor: color || '#f5913e' }}
     >
       { name }
