@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Display({ result }) {
   return (
-    <div>
+    <div className="display">
       <h1>{result}</h1>
     </div>
   );
