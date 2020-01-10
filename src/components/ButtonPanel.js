@@ -13,9 +13,14 @@ export default function ButtonPanel() {
     <div className="button-panel">
       {buttons.map((e, index) => (
         <div key={`group-${index + 1}`} className="button-row"> {/* eslint-disable-line */}
-          {e.map(name => <Button key={name} name={name} wide={name === '0'} 
-            color={['÷', 'X', '-', '+', '='].includes(name) ? null : '#e0e0e0'} />)
-          }
+          {(e.map(name =>
+            <Button
+              key={name}
+              name={name}
+              wide={name === '0'}
+              color={['÷', 'X', '-', '+', '='].includes(name) ? null : '#e0e0e0'}
+            />
+          ))}
         </div>
       ))}
     </div>
