@@ -12,8 +12,8 @@ export default function ButtonPanel() {
   return (
     <div>
       {buttons.map((e, index) => (
-        <div key={`group-${index}`}>
-          {e.map(name => <Button key={name} name={name} />)} {/* eslint-disable-line */}
+        <div key={`group-${index + 1}`}> {/* eslint-disable-line */}
+          {e.map(name => <Button key={name} name={name} />)}
         </div>
       ))}
     </div>
