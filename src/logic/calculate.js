@@ -1,14 +1,14 @@
 import operate from './operate';
 
-export default function calculate ({ data, buttonName }) {
-  if (buttonName === "+/-") {
-    data.total *= -1;
-    data.next *= -1;
-  } else if (buttonName === "AC") {
-    data.total = 0;
-    data.next = 0;
+export default function calculate({ data: {total, next, operation}, buttonName }) {
+  if (buttonName === '+/-') {
+    total *= -1;
+    next *= -1;
+  } else if (buttonName === 'AC') {
+    total = 0;
+    next = 0;
   } else {
-    data.total = operate(numberOne, numberTwo, operation)
+    total = operate(total, next, operation);
   }
-  return data;
+  return total;
 }

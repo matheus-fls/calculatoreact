@@ -1,16 +1,17 @@
-import Big from 'big.js';
+import Big from 'big';
 
-export default function operate ({ numberOne, numberTwo, operation }) {
-  ['÷', 'X', '-', '+', '=', '%']
+export default function operate({ numberOne, numberTwo, operation }) {
+  let result;
   if (operation === '÷') {
-    return Big(numberOne) / Big(numberTwo); 
+    result = Big(numberOne) / Big(numberTwo);
   } else if (operation === 'X') {
-    return Big(numberOne) * Big(numberTwo);
+    result = Big(numberOne) * Big(numberTwo);
   } else if (operation === '-') {
-    return Big(numberOne) - Big(numberTwo);
+    result = Big(numberOne) - Big(numberTwo);
   } else if (operation === '+') {
-    return Big(numberOne) + Big(numberTwo);
+    result = Big(numberOne) + Big(numberTwo);
   } else if (operation === '%') {
-    return ((Big(numberOne) * Big(numberTwo)) / 100);
-  } 
+    result = (Big(numberOne) * Big(numberTwo)) / 100;
+  }
+  return result;
 }
