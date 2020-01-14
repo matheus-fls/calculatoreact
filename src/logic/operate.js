@@ -16,6 +16,6 @@ export default function operate({ numberOne, numberTwo, operation }) {
   } else if (operation === '%') {
     result = unus.times(duo).div(Big(100));
   }
-  
+
   return result;
 }
