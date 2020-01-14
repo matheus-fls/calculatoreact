@@ -12,7 +12,7 @@ export default function operate({ numberOne, numberTwo, operation }) {
   } else if (operation === '-') {
     result = unus.minus(duo);
   } else if (operation === '+') {
-    result = Big(numberOne) + Big(numberTwo);
+    result = unus.plus(duo);
   } else if (operation === '%') {
     result = unus.times(duo).div(Big(100));
   }
