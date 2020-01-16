@@ -17,8 +17,11 @@ class App extends React.Component {
 
   handleClick(buttonName) {
     if (buttonName >= '1' && buttonName <= '9') {
-      (this.state.total === '0' || this.state.total === null) ? this.setState({ total: buttonName }) :
-        this.setState(({total}) => ({ total: total + buttonName }))
+      if (this.state.total === '0' || this.state.total === null) {
+        this.setState({ total: buttonName });
+      } else {
+        this.setState(({ total }) => ({ total: total + buttonName }));
+      }
     } else if (buttonName === 'AC') {
       this.setState({
         total: null,
@@ -28,18 +31,18 @@ class App extends React.Component {
     } else if (buttonName === '+/-' && (this.state.total !== null || this.state.next !== null)) {
       this.setState({
         total: calculate(this.state, buttonName),
-      })
+      });
     } else if (buttonName === '.') {
       if (this.state.total === null) {
-        this.setState({total: '0' + buttonName}) 
+        this.setState({ total: '0' + buttonName });
       } else if (!this.state.total.includes('.')) {
-        this.setState(({total}) => ({ total: total + buttonName }))
+        this.setState(({ total }) => ({ total: total + buttonName }));
       }
     } else if (buttonName === '0') {
       if (this.state.total === null) {
-        this.setState({ total: buttonName })
+        this.setState({ total: buttonName });
       } else if (this.state.total !== '0') {
-        this.setState(({total}) => ({ total: total + buttonName }))
+        this.setState(({ total }) => ({ total: total + buttonName }));
       }
     } else if (['÷', 'X', '-', '+', '%'].includes(buttonName) && (this.state.total !== null || this.state.next !== null)) {
       if (this.state.total && this.state.next && this.state.operation) {
@@ -61,12 +64,12 @@ class App extends React.Component {
           total: calculate(this.state, buttonName),
           next: null,
           operation: null,
-        })
+        });
       } else {
         this.setState({
           total: this.state.total || this.state.next,
           operation: null,
-        })
+        });
       }
     } 
   }
