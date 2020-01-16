@@ -1,13 +1,17 @@
 import React from 'react';
 import Button from './Button';
 
-export default function ButtonPanel() {
+export default function ButtonPanel({ clickHandler }) {
   const buttons = [['AC', '+/-', '%', '÷'],
     ['7', '8', '9', 'X'],
     ['4', '5', '6', '-'],
     ['1', '2', '3', '+'],
     ['0', '.', '='],
   ];
+
+  function handleClick(buttonName) {
+    return clickHandler(buttonName);
+  };
 
   return (
     <div className="button-panel">
@@ -19,6 +23,7 @@ export default function ButtonPanel() {
               name={name}
               wide={name === '0'}
               color={['÷', 'X', '-', '+', '='].includes(name) ? null : '#e0e0e0'}
+              clickHandler={handleClick}
             />
           ))}
         </div>
