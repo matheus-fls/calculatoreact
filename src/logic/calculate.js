@@ -4,7 +4,7 @@ export default function calculate({ next, total, operation }, buttonName) {
   let newTotal = total;
   let newNext = next;
   let newOperation = operation;
-  
+
   if (buttonName === '+/-') {
     newTotal *= -1;
     newNext *= -1;

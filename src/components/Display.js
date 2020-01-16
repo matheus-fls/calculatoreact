@@ -5,7 +5,7 @@ export default function Display({ result, next, operation }) {
   return (
     <div className="display">
       <h1>
-        {next || result || '0'} {operation || ' '}
+        {next || result || '0'} {operation || ' '} {/* eslint-disable-line */}
       </h1>
     </div>
   );

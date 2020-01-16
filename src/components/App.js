@@ -14,7 +14,7 @@ class App extends React.Component {
     };
   }
 
-  handleClick = (buttonName) => {
+  handleClick = (buttonName) => { {/* eslint-disable-line */}
     if (buttonName >= '1' && buttonName <= '9') {
       (this.state.total === '0' || this.state.total === null) ? this.setState({ total: buttonName }) :
         this.setState(({total}) => ({ total: total + buttonName }))

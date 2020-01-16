@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './Button';
 import PropTypes from 'prop-types';
+import Button from './Button';
 
 export default function ButtonPanel({ clickHandler }) {
   const buttons = [['AC', '+/-', '%', '÷'],
@@ -33,6 +33,6 @@ export default function ButtonPanel({ clickHandler }) {
   );
 }
 
-Button.propTypes = {
+ButtonPanel.propTypes = {
   clickHandler: PropTypes.func.isRequired,
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button({ name, color, wide, clickHandler }) {
+export default function Button({ name, color, wide, clickHandler }) { {/* eslint-disable-line */}
   const handleClick = () => clickHandler(name);
 
   return (
