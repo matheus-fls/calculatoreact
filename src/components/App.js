@@ -12,9 +12,10 @@ class App extends React.Component {
       next: null,
       operation: null,
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick = (buttonName) => { {/* eslint-disable-line */}
+  handleClick(buttonName) {
     if (buttonName >= '1' && buttonName <= '9') {
       (this.state.total === '0' || this.state.total === null) ? this.setState({ total: buttonName }) :
         this.setState(({total}) => ({ total: total + buttonName }))
