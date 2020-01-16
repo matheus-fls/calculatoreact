@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import PropTypes from 'prop-types';
 
 export default function ButtonPanel({ clickHandler }) {
   const buttons = [['AC', '+/-', '%', '÷'],
@@ -11,7 +12,7 @@ export default function ButtonPanel({ clickHandler }) {
 
   function handleClick(buttonName) {
     return clickHandler(buttonName);
-  };
+  }
 
   return (
     <div className="button-panel">
@@ -31,3 +32,7 @@ export default function ButtonPanel({ clickHandler }) {
     </div>
   );
 }
+
+Button.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};

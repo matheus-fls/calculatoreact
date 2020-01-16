@@ -4,6 +4,7 @@ export default function calculate({ next, total, operation }, buttonName) {
   let newTotal = total;
   let newNext = next;
   let newOperation = operation;
+  
   if (buttonName === '+/-') {
     newTotal *= -1;
     newNext *= -1;
@@ -14,5 +15,6 @@ export default function calculate({ next, total, operation }, buttonName) {
   } else {
     newTotal = operate(newNext, newTotal, newOperation);
   }
+
   return newTotal.toString();
 }

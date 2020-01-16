@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 export default function Display({ result, next, operation }) {
   return (
     <div className="display">
-      <h1>{next|| result || '0'} {operation || ' '}</h1>
+      <h1>
+        {next || result || '0'} {operation || ' '}
+      </h1>
     </div>
   );
 }
@@ -17,4 +19,6 @@ Display.propTypes = {
 
 Display.defaultProps = {
   result: '0',
+  next: '',
+  operation: '',
 };
