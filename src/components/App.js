@@ -23,7 +23,7 @@ class App extends React.Component {
       temp,
     } = this.state;
 
-    const result = calculate({ 
+    const result = calculate({
       total,
       next,
       operation,
