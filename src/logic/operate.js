@@ -21,5 +21,5 @@ export default function operate(numberOne, numberTwo, operation) {
     result = unus.times(duo).div(Big(100));
   }
 
-  return result;
+  return result.toString();
 }
