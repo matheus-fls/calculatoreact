@@ -6,7 +6,11 @@ export default function operate(numberOne, numberTwo, operation) {
   let result;
 
   if (operation === '÷') {
-    result = unus.div(duo);
+    if (numberOne === '0' || numberTwo === '0') {
+      return 'Cannot divide by zero'
+    } else {
+      result = unus.div(duo);
+    }
   } else if (operation === 'X') {
     result = unus.times(duo);
   } else if (operation === '-') {

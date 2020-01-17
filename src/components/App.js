@@ -11,6 +11,7 @@ class App extends React.Component {
       total: null,
       next: null,
       operation: null,
+      temp: null,
     };
   }
 
@@ -28,6 +29,7 @@ class App extends React.Component {
         total: null,
         next: null,
         operation: null,
+        temp: null,
       });
     } else if (buttonName === '+/-' && (total !== null || next !== null)) {
       this.setState({ total: calculate({ total, next, operation }, buttonName) });
@@ -60,7 +62,8 @@ class App extends React.Component {
     } else if (buttonName === '=') {
       if (total !== null && operation !== null && next !== null) {
         this.setState({
-          total: calculate({ total, next, operation }, buttonName),
+          temp: calculate({ total, next, operation }, buttonName),
+          total: null,
           next: null,
           operation: null,
         });
@@ -74,10 +77,10 @@ class App extends React.Component {
   }
 
   render() {
-    const { total, next, operation } = this.state;
+    const { total, next, operation, temp } = this.state;
     return (
       <div className="app">
-        <Display result={total || next} operation={operation} />
+        <Display result={total || next || temp} operation={operation} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );

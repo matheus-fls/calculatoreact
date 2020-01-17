@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Display({ result, next, operation }) {
+export default function Display({ result, operation }) {
   return (
     <div className="display">
       <h1>
-        {next || result || '0'} {operation || ' '} {/* eslint-disable-line */}
+        {result || '0'} {operation || ' '} {/* eslint-disable-line */}
       </h1>
     </div>
   );
