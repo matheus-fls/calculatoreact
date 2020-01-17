@@ -12,12 +12,13 @@ class App extends React.Component {
       next: null,
       operation: null,
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(buttonName) {
+  handleClick = (buttonName) => {
+    const { total, next, operation } = this.state;
+
     if (buttonName >= '1' && buttonName <= '9') {
-      if (this.state.total === '0' || this.state.total === null) {
+      if (total === '0' || total === null) {
         this.setState({ total: buttonName });
       } else {
         this.setState(({ total }) => ({ total: total + buttonName }));
@@ -27,25 +28,25 @@ class App extends React.Component {
         total: null,
         next: null,
         operation: null,
-      })
-    } else if (buttonName === '+/-' && (this.state.total !== null || this.state.next !== null)) {
+      });
+    } else if (buttonName === '+/-' && (total !== null || next !== null)) {
       this.setState({
         total: calculate(this.state, buttonName),
       });
     } else if (buttonName === '.') {
-      if (this.state.total === null) {
-        this.setState({ total: '0' + buttonName });
-      } else if (!this.state.total.includes('.')) {
+      if (total === null) {
+        this.setState({ total: '0.' });
+      } else if (!total.includes('.')) {
         this.setState(({ total }) => ({ total: total + buttonName }));
       }
     } else if (buttonName === '0') {
-      if (this.state.total === null) {
+      if (total === null) {
         this.setState({ total: buttonName });
-      } else if (this.state.total !== '0') {
+      } else if (total !== '0') {
         this.setState(({ total }) => ({ total: total + buttonName }));
       }
-    } else if (['÷', 'X', '-', '+', '%'].includes(buttonName) && (this.state.total !== null || this.state.next !== null)) {
-      if (this.state.total && this.state.next && this.state.operation) {
+    } else if (['÷', 'X', '-', '+', '%'].includes(buttonName) && (total !== null || next !== null)) {
+      if (total && next && operation) {
         this.setState({
           next: calculate(this.state, buttonName),
           total: null,
@@ -54,12 +55,12 @@ class App extends React.Component {
       } else {
         this.setState({
           operation: buttonName,
-          next: this.state.total || this.state.next,
+          next: total || next,
           total: null,
         });
       }
     } else if (buttonName === '=') {
-      if (this.state.total !== null && this.state.operation !== null && this.state.next !== null) {
+      if (total !== null && operation !== null && next !== null) {
         this.setState({
           total: calculate(this.state, buttonName),
           next: null,
@@ -67,17 +68,18 @@ class App extends React.Component {
         });
       } else {
         this.setState({
-          total: this.state.total || this.state.next,
+          total: total || next,
           operation: null,
         });
       }
-    } 
+    }
   }
 
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div className="app">
-        <Display result={this.state.total || this.state.next} operation={this.state.operation} />
+        <Display result={total || next} operation={operation} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
