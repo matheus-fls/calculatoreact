@@ -1,18 +1,17 @@
 import operate from './operate';
 
 export default function calculate({
-  total, 
-  next, 
-  operation, 
-  temp
+  total,
+  next,
+  operation,
+  temp,
 }, buttonName) {
-
   const result = {
     newTotal: total,
     newNext: next,
     newOperation: operation,
     newTemp: temp,
-  }
+  };
 
   if (buttonName >= '1' && buttonName <= '9') {
     if (total === '0' || total === null) {
@@ -21,10 +20,10 @@ export default function calculate({
       result.newTotal = total + buttonName;
     }
   } else if (buttonName === 'AC') {
-      result.newTotal = null;
-      result.newNext = null;
-      result.newOperation = null;
-      result.newTemp = null;
+    result.newTotal = null;
+    result.newNext = null;
+    result.newOperation = null;
+    result.newTemp = null;
   } else if (buttonName === '+/-' && (total !== null || next !== null)) {
     result.newTotal = (total * -1).toString();
   } else if (buttonName === '.') {

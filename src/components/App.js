@@ -16,18 +16,18 @@ class App extends React.Component {
   }
 
   handleClick = (buttonName) => {
-    const { 
-      total, 
-      next, 
-      operation, 
-      temp 
+    const {
+      total,
+      next,
+      operation,
+      temp,
     } = this.state;
 
     const result = calculate({ 
-      total, 
-      next, 
-      operation, 
-      temp 
+      total,
+      next,
+      operation,
+      temp,
     }, buttonName);
 
     this.setState({
@@ -39,11 +39,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { 
-      total, 
-      next, 
-      operation, 
-      temp 
+    const {
+      total,
+      next,
+      operation,
+      temp,
     } = this.state;
 
     return (
