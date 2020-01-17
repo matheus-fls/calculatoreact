@@ -30,8 +30,7 @@ class App extends React.Component {
         operation: null,
       });
     } else if (buttonName === '+/-' && (total !== null || next !== null)) {
-      const newTotal = calculate(this.state, buttonName);
-      this.setState({ total: newTotal });
+      this.setState({ total: calculate({ total, next, operation }, buttonName) });
     } else if (buttonName === '.') {
       if (total === null) {
         this.setState({ total: '0.' });
@@ -46,9 +45,8 @@ class App extends React.Component {
       }
     } else if (['÷', 'X', '-', '+', '%'].includes(buttonName) && (total !== null || next !== null)) {
       if (total && next && operation) {
-        const newTotal = calculate(this.state, buttonName);
         this.setState({
-          next: newTotal,
+          next: calculate({ total, next, operation }, buttonName),
           total: null,
           operation: buttonName,
         });
@@ -61,9 +59,8 @@ class App extends React.Component {
       }
     } else if (buttonName === '=') {
       if (total !== null && operation !== null && next !== null) {
-        const newTotal = calculate(this.state, buttonName);
         this.setState({
-          total: newTotal,
+          total: calculate({ total, next, operation }, buttonName),
           next: null,
           operation: null,
         });
