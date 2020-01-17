@@ -16,9 +16,19 @@ class App extends React.Component {
   }
 
   handleClick = (buttonName) => {
-    const { total, next, operation, temp } = this.state;
+    const { 
+      total, 
+      next, 
+      operation, 
+      temp 
+    } = this.state;
 
-    const result = calculate({ total, next, operation, temp }, buttonName);
+    const result = calculate({ 
+      total, 
+      next, 
+      operation, 
+      temp 
+    }, buttonName);
 
     this.setState({
       total: result.newTotal,
@@ -29,7 +39,13 @@ class App extends React.Component {
   }
 
   render() {
-    const { total, next, operation, temp } = this.state;
+    const { 
+      total, 
+      next, 
+      operation, 
+      temp 
+    } = this.state;
+
     return (
       <div className="app">
         <Display result={total || next || temp} operation={operation} />

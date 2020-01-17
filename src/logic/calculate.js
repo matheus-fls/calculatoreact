@@ -1,7 +1,13 @@
 import operate from './operate';
 
-export default function calculate({ total, next, operation, temp}, buttonName) {
-  let result = {
+export default function calculate({
+  total, 
+  next, 
+  operation, 
+  temp
+}, buttonName) {
+
+  const result = {
     newTotal: total,
     newNext: next,
     newOperation: operation,
