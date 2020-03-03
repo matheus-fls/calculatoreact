@@ -1,6 +1,6 @@
 # calculatoReact
 
-> This is a calculator app built with HTML, CSS, JS and React. Based on this [project guidelines](https://github.com/microverseinc/project-react-calculator/blob/master/README.md). The main purpose is to develop and deploy a functional React calculator app.
+> This is a calculator app built with HTML, CSS, JS and React. Based on these [project guidelines](https://github.com/microverseinc/project-react-calculator/blob/master/README.md). The main purpose is to develop and deploy a functional calculator app built with React.
 
 ![screenshot](https://raw.githubusercontent.com/microverseinc/project-react-calculator/master/images/calculator.png)
 
